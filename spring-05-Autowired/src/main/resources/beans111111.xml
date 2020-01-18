@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cat" class="com.qinwei.pojo.Cat"/>
+    <bean class="com.qinwei.pojo.Dog"/>
+
+<!--    byName会自动在容器上下文中查找，和只是set方法后面的值对应的bean id-->
+    <bean id="people" class="com.qinwei.pojo.People" autowire="byType">
+        <property name="name" value="qinwei-heiheihei"/>
+    </bean>
+
+</beans>
